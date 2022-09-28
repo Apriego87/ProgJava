@@ -32,7 +32,7 @@ public class ej17 {
 		System.out.println("Interés anual: " + intAnual + "%");
 		System.out.println("Duración en años del préstamo: " + anyos);
 		System.out.println("Número de pagos: " + numPagos);
-		System.out.format("Pago mensual: %.2f" , pagoMensual , " euros.\n");
+		System.out.format("Pago mensual: %.2f euros. \r\n" , pagoMensual);
 		System.out.println("Cantidad total a pagar: " + Math.round(pagoMensual * numPagos) + " euros.");
 	}
 
