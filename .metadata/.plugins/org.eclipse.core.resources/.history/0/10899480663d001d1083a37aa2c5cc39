@@ -1,0 +1,12 @@
+package ud1_Practicas;
+
+public class ej4 {
+
+	public static void main(String[] args) {
+		final byte year = 12;
+		byte mes = 6;
+		System.out.print("Mes " + mes + " de " + year + ".");
+		System.out.println("Porcentaje transcurrido: " + ((float)(mes * 100))/year);
+	}
+
+}

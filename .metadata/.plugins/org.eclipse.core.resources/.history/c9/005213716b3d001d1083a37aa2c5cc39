@@ -1,0 +1,15 @@
+package ud1_Practicas;
+
+import java.util.Scanner;
+
+public class ej8 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Introduce un valor: ");
+		String val1 = scan.next();
+		System.out.println("Introduce otro valor: ");
+		String val2 = scan.next();
+	}
+
+}

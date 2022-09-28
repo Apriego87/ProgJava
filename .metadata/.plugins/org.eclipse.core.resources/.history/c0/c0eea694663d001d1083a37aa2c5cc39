@@ -1,0 +1,15 @@
+package ud1_Practicas;
+
+import java.util.Scanner;
+
+public class ej4 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		final byte year = 12;
+		byte mes = scan.nextByte();
+		System.out.print("Mes " + mes + " de " + year + ".");
+		System.out.println("Porcentaje transcurrido: " + ((float)(mes * 100))/year);
+	}
+
+}

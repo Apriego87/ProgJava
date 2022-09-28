@@ -1,0 +1,18 @@
+package pruebas;
+
+import java.util.Scanner;
+
+public class ej1_calcDesc {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Escribe el precio del producto: ");
+		int precio = scan.nextByte();
+		System.out.print("Escribe el descuento a aplicar: ");
+		int desc = (scan.nextByte() / 100);
+		int precioF = precio - desc;
+		System.out.print("El precio final es de " + precioF + " euros.");
+
+	}
+
+}
