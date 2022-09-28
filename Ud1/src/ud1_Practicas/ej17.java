@@ -28,12 +28,12 @@ public class ej17 {
 
 		System.out.println("------------------------------------------");
 		System.out.println("Resultado de la operación: ");
-		System.out.println("Cantidad prestada: " + cantidPrest + "€");
+		System.out.println("Cantidad prestada: " + cantidPrest + " euros.");
 		System.out.println("Interés anual: " + intAnual + "%");
 		System.out.println("Duración en años del préstamo: " + anyos);
 		System.out.println("Número de pagos: " + numPagos);
-		System.out.println("Pago mensual: " + pagoMensual + "€");
-		System.out.println("Cantidad total a pagar: " + Math.round(pagoMensual * numPagos) + "€");
+		System.out.format("Pago mensual: %.2f" , pagoMensual , " euros.\n");
+		System.out.println("Cantidad total a pagar: " + Math.round(pagoMensual * numPagos) + " euros.");
 	}
 
 }
