@@ -20,7 +20,7 @@ public class ej6 {
         }
         if (consum >= 1000) {
             System.out.printf("Deberás pagar: %.2f euros.",
-                    ((100 * 0.15) + (400 * 0.20) + (900 * 0.35) + ((consum - 1000) * 0.8)));
+                    ((100 * 0.15) + (400 * 0.20) + (500 * 0.35) + ((consum - 1000) * 0.8)));
         }
     }
 }
