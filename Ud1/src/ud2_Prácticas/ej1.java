@@ -9,10 +9,9 @@ public class ej1 {
         int num = scan.nextInt();
         scan.close();
 
-        if(num%2==0){
+        if (num % 2 == 0) {
             System.out.println("El número es par.");
-        }
-        else {
+        } else {
             System.out.println("El número es impar.");
         }
     }

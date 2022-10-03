@@ -8,7 +8,7 @@ public class ej6 {
         System.out.println("Introduce el consumo de agua: ");
         float consum = scan.nextFloat();
         scan.close();
-        
+
         if (consum < 100) {
             System.out.printf("Deberás pagar: %.2f euros.", consum * 0.15);
         }

@@ -13,12 +13,12 @@ public class ej3 {
         if (num1 % num2 == 0) {
             System.out.printf("%.2f es múltiplo de %.2f", num1, num2);
             System.exit(1);
-        }        
+        }
         if (num2 % num1 == 0) {
             System.out.printf("%.2f es múltiplo de %.2f", num2, num1);
             System.exit(1);
-        } 
-        
+        }
+
         else {
             System.out.println("No son múltiplos.");
         }

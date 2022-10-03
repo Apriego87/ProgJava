@@ -22,8 +22,7 @@ public class ej5 {
         if (carac >= 'A' && carac <= 'Z') {
             System.out.println("Es una letra mayúscula.");
             System.exit(1);
-        }
-        else{
+        } else {
             System.out.println("El carácter introducido no es alfanumérico.");
         }
     }
