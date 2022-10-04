@@ -6,7 +6,7 @@ public class ej10 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        int num, min = 100, max = 0, suma = 0, cont = 0;
+        int num, suma = 0, cont = 0;
 
         /*
          * for(int i=1;i<=3;i++){
@@ -18,6 +18,8 @@ public class ej10 {
 
         System.out.print("Introduce un número entero: ");
         num = scan.nextInt();
+
+        int min = num, max = num;
 
         while (num > 0) {
             suma += num;
@@ -32,6 +34,8 @@ public class ej10 {
 
             cont++;
         }
+
+        scan.close();
 
         float media = (float) suma / cont;
 
