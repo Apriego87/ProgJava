@@ -2,19 +2,21 @@ package ud2_Prácticas;
 
 public class ej15 {
     public static void main(String[] args) {
-        int cont = 0;
-
-        boolean noEsPrimo = false;
-        
-        for(int num = 1;cont<100;num++){
-            for (int i = 2; i <= num / 2; ++i) {
-                if (num % i == 0) {
-                    noEsPrimo = true;
+        Boolean flag = false;
+        int contPrimos = 0, num = 2;
+        while (contPrimos < 100) {
+            for (int j = 2; j <= Math.sqrt(num); j++) {
+                if ((num % j) == 0) {
+                    flag = true;
+                    break;
                 }
             }
-            if (!noEsPrimo) {
-                System.out.println(num + "  ");
+            if (flag == false) {
+                System.out.print(num + " \n");
+                contPrimos++;
             }
+            num++;
+            flag = false;
         }
     }
 }
