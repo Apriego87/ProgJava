@@ -15,11 +15,20 @@ public class ej12 {
 
         scan.close();
 
+        if (exp < 0){
+            System.out.println("El exponente debe ser positivo.");
+            System.exit(1);
+        }
+
         result = base;
 
         for(int i = 1; i<exp; i++){
             
             result *= base;
+        }
+
+        if(exp == 0){
+            result = 1;
         }
 
         System.out.println(result);
