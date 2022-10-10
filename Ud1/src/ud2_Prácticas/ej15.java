@@ -5,14 +5,14 @@ public class ej15 {
         Boolean flag = false;
         int contPrimos = 0, num = 2;
         while (contPrimos < 100) {
-            for (int j = 2; j <= Math.sqrt(num); j++) {
+            for (int j = 2; j <= num / 2; j++) {
                 if ((num % j) == 0) {
                     flag = true;
                     break;
                 }
             }
             if (flag == false) {
-                System.out.print(num + " \n");
+                System.out.println(num);
                 contPrimos++;
             }
             num++;
