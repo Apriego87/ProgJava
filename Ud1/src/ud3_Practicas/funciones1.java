@@ -1,6 +1,5 @@
 package ud3_Practicas;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class funciones1 {
