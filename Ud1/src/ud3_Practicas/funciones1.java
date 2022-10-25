@@ -1,0 +1,14 @@
+package ud3_Practicas;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+public class funciones1 {
+
+    public static void hora() {
+        System.out.println(LocalDateTime.now().getHour());
+    }
+    public static void main(String[] args) {
+        hora();
+    }
+}
