@@ -1,4 +1,4 @@
-package ud3_Practicas;
+package ud3_Practicas.ejemplos;
 
 import java.time.LocalDateTime;
 
