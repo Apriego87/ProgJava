@@ -1,6 +1,5 @@
 package ud2_Prácticas;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ej5 {
