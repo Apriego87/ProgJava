@@ -1,5 +1,5 @@
 package ud3_Practicas.arrays;
 
-public class ej6 {
+public class ej6{
     
 }
