@@ -1,7 +1,5 @@
 package ud3_Practicas.arrays;
 
-import java.util.Arrays;
-
 public class ej5 {
     public static void main(String[] args) {
         int[] arr = new int[20];
