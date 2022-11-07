@@ -12,7 +12,7 @@ public class ej6 {
     public static void leer(int[] nums) {
         Scanner scan = new Scanner(System.in);
         System.out.print("Introducción de elementos en el array.\n");
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < nums.length; i++) {
             System.out.print("Introduce un número: ");
             nums[i] = scan.nextInt();
         }
@@ -51,12 +51,15 @@ public class ej6 {
         System.out.println("\nRESULTADO:");
         for (int i = 0; i < nums.length; i++) {
             System.out.print(nums[i]);
+
             if (nums[i] == min(nums)) {
                 System.out.print("\tmínimo");
             }
+
             if (nums[i] == max(nums)) {
                 System.out.print("\tmáximo");
             }
+
             System.out.println("");
         }
     }
