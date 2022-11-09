@@ -2,7 +2,7 @@ package ud3_Practicas.arrays;
 
 import java.util.Scanner;
 
-public class ej12 {
+public class ej12remics {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
@@ -13,6 +13,14 @@ public class ej12 {
         char[] letras = new char[] { 'a', 'e', 'i', 'o', 'u' };
         char[][] total = new char[][] { letras, frec };
 
+        calcular(frec, texto);
+
+        for (int i = 0; i < frec.length; i++) {
+            System.out.printf("%c: %d\n", total[0][i], (int) total[1][i]);
+        }
+    }
+
+    public static void calcular(char[] frec, String texto) {
         for (int i = 0; i < texto.length(); i++) {
             char unit = texto.charAt(i);
 
@@ -33,10 +41,6 @@ public class ej12 {
                     frec[4]++;
                     break;
             }
-        }
-
-        for (int i = 0; i < frec.length; i++) {
-            System.out.printf("%c: %d\n", total[0][i], (int) total[1][i]);
         }
     }
 }

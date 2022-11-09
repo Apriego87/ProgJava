@@ -7,6 +7,7 @@ public class ej9 {
         Scanner scan = new Scanner(System.in);
 
         float[] notas = new float[30];
+        int contador = 0;
 
         for (int i = 0; i < notas.length; i++) {
             System.out.printf("Introduce la nota del alumno %d: ", i + 1);
@@ -15,31 +16,32 @@ public class ej9 {
                 break;
             }
             notas[i] = sig;
+            contador++;
         }
 
         System.out.println("\nCalificaciones:");
 
-        for (int i = 0; i < notas.length; i++) {
+        for (int i = 0; i < contador; i++) {
             System.out.println(notas[i]);
         }
 
-        System.out.printf("\nNota media: %f", media(notas));
-        System.out.printf("\nNúmero de aprobados: %d", notas.length - susp(notas));
-        System.out.printf("\nNúmero de suspensos: %d", susp(notas));
-        System.out.printf("\nNota máxima: %f", max(notas));
+        System.out.printf("\nNota media: %f", media(notas, contador));
+        System.out.printf("\nNúmero de aprobados: %d", contador - susp(notas, contador));
+        System.out.printf("\nNúmero de suspensos: %d", susp(notas, contador));
+        System.out.printf("\nNota máxima: %f", max(notas, contador));
     }
 
-    public static float media(float[] notas) {
+    public static float media(float[] notas, int contador) {
         float suma = 0;
-        for (int i = 0; i < notas.length; i++) {
+        for (int i = 0; i < contador; i++) {
             suma += notas[i];
         }
-        return suma / notas.length;
+        return suma / contador;
     }
 
-    public static int susp(float[] notas) {
+    public static int susp(float[] notas, int contador) {
         int cont = 0;
-        for (int i = 0; i < notas.length; i++) {
+        for (int i = 0; i < contador; i++) {
             if (notas[i] < 5) {
                 cont++;
             }
@@ -47,9 +49,9 @@ public class ej9 {
         return cont;
     }
 
-    public static float max(float[] notas) {
+    public static float max(float[] notas, int contador) {
         float max = 0;
-        for (int i = 0; i < notas.length; i++) {
+        for (int i = 0; i < contador; i++) {
             if (notas[i] > max) {
                 max = notas[i];
             }
