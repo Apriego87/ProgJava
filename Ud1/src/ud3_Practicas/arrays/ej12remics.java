@@ -9,6 +9,8 @@ public class ej12remics {
         System.out.print("Introduce un string: ");
         String texto = scan.nextLine();
 
+        scan.close();
+
         char[] frec = new char[5];
         char[] letras = new char[] { 'a', 'e', 'i', 'o', 'u' };
         char[][] total = new char[][] { letras, frec };
