@@ -6,35 +6,13 @@ import java.util.Scanner;
 public class ej13 {
     public static void main(String[] args) {
         double[][] notas = { { 5.6, 9.4, 6.8, 7 },
-                            { 6.9, 5.2, 5.7, 6.3 },
-                            { 9.8, 7, 7.6, 8.5 } };
+                { 6.9, 5.2, 5.7, 6.3 },
+                { 9.8, 7, 7.6, 8.5 } };
 
         metA(notas);
         metB(notas);
         metC(notas);
         metD(notas);
-    }
-
-    public static void metB(double[][] notas) {
-        double media = 0;
-        System.out.print("\nPOR ASIGNATURA\n");
-        for (int i = 0; i < notas[0].length; i++) {
-            double suma = 0, min = notas[0][i], max = notas[0][i];
-            for (int j = 0; j < notas.length; j++) {
-                suma += notas[j][i];
-                if (notas[j][i] > max) {
-                    max = notas[j][i];
-                }
-
-                if (notas[j][i] < min) {
-                    min = notas[j][i];
-                }
-            }
-
-            media = suma / notas.length;
-
-            System.out.printf(" Nota media: %.3f \t Nota máxima: %.3f \t Nota mínima: %.3f \n", media, max, min);
-        }
     }
 
     public static void metA(double[][] notas) {
@@ -55,6 +33,28 @@ public class ej13 {
             }
 
             media = suma / notas[i].length;
+
+            System.out.printf(" Nota media: %.3f \t Nota máxima: %.3f \t Nota mínima: %.3f \n", media, max, min);
+        }
+    }
+
+    public static void metB(double[][] notas) {
+        double media = 0;
+        System.out.print("\nPOR ASIGNATURA\n");
+        for (int i = 0; i < notas[0].length; i++) {
+            double suma = 0, min = notas[0][i], max = notas[0][i];
+            for (int j = 0; j < notas.length; j++) {
+                suma += notas[j][i];
+                if (notas[j][i] > max) {
+                    max = notas[j][i];
+                }
+
+                if (notas[j][i] < min) {
+                    min = notas[j][i];
+                }
+            }
+
+            media = suma / notas.length;
 
             System.out.printf(" Nota media: %.3f \t Nota máxima: %.3f \t Nota mínima: %.3f \n", media, max, min);
         }
@@ -92,7 +92,7 @@ public class ej13 {
 
         for (int i = 0; i < notas.length; i++) {
             for (int j = 0; j < notas[i].length; j++) {
-                if (notas[i][j] == nota){
+                if (notas[i][j] == nota) {
                     System.out.printf(" Alumno: %d \t Materia: %d\n", i + 1, j + 1);
                 }
             }
