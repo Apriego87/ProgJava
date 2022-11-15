@@ -16,6 +16,7 @@ public class ej7 {
     public static void comprobar(String palabra) {
         char[] izq = new char[palabra.length() / 2];
         char[] der = new char[palabra.length() / 2];
+        
         int cont = 0;
 
         for (int i = 0; i < palabra.length() / 2; i++) {
