@@ -27,7 +27,6 @@ public class ej5 {
     }
 
     public static void imprimir(String[] nombres, float[] sueldos) {
-        String nombre = nombres[0];
         float sueldo = sueldos[0];
         for (int i = 1; i < nombres.length; i++){
             if (sueldos[i] > sueldo){
@@ -35,6 +34,12 @@ public class ej5 {
             }
         }
 
-        System.out.printf("Nombre: %s \t Sueldo: %f\n", nombre, sueldo);
+        for (int i = 1; i < nombres.length; i++){
+            if (sueldos[i] == sueldo){
+                System.out.printf("Nombre: %s \t Sueldo: %f\n", nombres[i], sueldo);
+            }
+        }
+
+        //System.out.printf("Nombre: %s \t Sueldo: %f\n", nombre, sueldo);
     }
 }
