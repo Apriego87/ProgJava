@@ -10,6 +10,8 @@ public class ej7 {
         System.out.print("Introduce una palabra: ");
         String palabra = scan.next();
 
+        scan.close();
+
         comprobar(palabra);
     }
 
