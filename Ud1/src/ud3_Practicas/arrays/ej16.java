@@ -38,24 +38,26 @@ public class ej16 {
     }
 
     public static boolean comprobar(int[][] nums) {
+        boolean hola = true;
         int suma = 0, oldSuma = 0;
         for (int i = 0; i < nums.length; i++) {
             for (int j = 0; j < nums[i].length; j++) {
-                if (i == 0) {
+                if (i  > 0) {
                     suma += nums[i][j];
                 }
 
-                if (i > 0) {
-                    oldSuma += nums[i - 1][j];
+                if (i == 0) {
+                    oldSuma += nums[i][j];
                 }
             }
 
-            if (i < 0){
+            if (i > 0){
                 if (suma != oldSuma) {
-                    return false;
+                    hola = false;
                 }
+                oldSuma = suma;
             }
         }
-        return true;
+        return hola;
     }
 }
