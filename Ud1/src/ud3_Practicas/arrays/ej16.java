@@ -2,7 +2,7 @@ package ud3_Practicas.arrays;
 
 import java.util.Scanner;
 
-public class ej14 {
+public class ej16 {
     public static void main(String[] args) {
         System.out.println(comprobar(crearArray(leer())));
     }
@@ -25,8 +25,9 @@ public class ej14 {
         Scanner scan = new Scanner(System.in);
         int[][] nums = new int[size[0]][size[1]];
         for (int i = 0; i < size[0]; i++) {
+            System.out.printf("Fila %d\n", i + 1);
             for (int j = 0; j < size[1]; j++) {
-                System.out.printf("Introduce el dato %d: ", j + 1);
+                System.out.printf(" Introduce el dato %d: ", j + 1);
                 nums[i][j] = scan.nextInt();
             }
         }
@@ -37,9 +38,20 @@ public class ej14 {
     }
 
     public static boolean comprobar(int[][] nums) {
+        int suma = 0, oldSuma = 0;
         for (int i = 0; i < nums.length; i++) {
             for (int j = 0; j < nums[i].length; j++) {
-                if (nums[i][j] != nums[j][i]) {
+                if (i == 0) {
+                    suma += nums[i][j];
+                }
+
+                if (i > 0) {
+                    oldSuma += nums[i - 1][j];
+                }
+            }
+
+            if (i < 0){
+                if (suma != oldSuma) {
                     return false;
                 }
             }

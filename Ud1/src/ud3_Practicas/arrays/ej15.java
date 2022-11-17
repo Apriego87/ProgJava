@@ -1,10 +1,12 @@
 package ud3_Practicas.arrays;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class ej14 {
+public class ej15 {
     public static void main(String[] args) {
-        System.out.println(comprobar(crearArray(leer())));
+        int[] leer = leer();
+        System.out.println(Arrays.deepToString(comprobar(crearArray(leer), leer)).replace("],", "],\n"));
     }
 
     public static int[] leer() {
@@ -25,25 +27,27 @@ public class ej14 {
         Scanner scan = new Scanner(System.in);
         int[][] nums = new int[size[0]][size[1]];
         for (int i = 0; i < size[0]; i++) {
+            System.out.printf("Fila %d\n", i + 1);
             for (int j = 0; j < size[1]; j++) {
-                System.out.printf("Introduce el dato %d: ", j + 1);
+                System.out.printf(" Introduce el dato %d: ", j + 1);
                 nums[i][j] = scan.nextInt();
             }
         }
 
-        scan.close();
+        scan.close();        
 
         return nums;
     }
 
-    public static boolean comprobar(int[][] nums) {
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = 0; j < nums[i].length; j++) {
-                if (nums[i][j] != nums[j][i]) {
-                    return false;
-                }
+    public static int[][] comprobar(int[][] nums, int[] size) {
+        int[][] trasp = new int[size[0]][size[1]];
+
+        for(int i = 0; i < trasp.length; i++){
+            for (int j = 0; j < trasp[i].length; j++){
+                trasp[i][j] = nums[j][i];
             }
         }
-        return true;
+
+        return trasp;
     }
 }
