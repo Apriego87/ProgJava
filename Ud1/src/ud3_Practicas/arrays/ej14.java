@@ -1,6 +1,5 @@
 package ud3_Practicas.arrays;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class ej14 {
@@ -33,17 +32,20 @@ public class ej14 {
                 nums[i][j] = scan.nextInt();
             }
         }
-        
+
         scan.close();
 
         return nums;
     }
 
     public static boolean comprobar(int[][] nums) {
-        for (int i = 0; i < nums.length; i++)
-            for (int j = 0; j < nums[i].length; j++)
-                if (nums[i][j] != nums[j][i])
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums[i].length; j++) {
+                if (nums[i][j] != nums[j][i]) {
                     return false;
+                }
+            }
+        }
         return true;
     }
 }
