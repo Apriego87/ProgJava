@@ -37,8 +37,7 @@ public class ej16 {
         return nums;
     }
 
-    public static boolean comprobar(int[][] nums) {
-        boolean hola = true;
+    public static boolean comprobarFilas(int[][] nums) {
         int suma = 0, oldSuma = 0;
         for (int i = 0; i < nums.length; i++) {
             for (int j = 0; j < nums[i].length; j++) {
@@ -53,11 +52,12 @@ public class ej16 {
 
             if (i > 0){
                 if (suma != oldSuma) {
-                    hola = false;
+                    return false;
                 }
                 oldSuma = suma;
+                suma = 0;
             }
         }
-        return hola;
+        return true;
     }
 }
