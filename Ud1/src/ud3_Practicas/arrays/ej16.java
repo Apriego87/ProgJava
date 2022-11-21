@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ej16 {
     public static void main(String[] args) {
-        System.out.println(comprobar(crearArray(leer())));
+        System.out.println(crearArray(leer()));
     }
 
     public static int[] leer() {
@@ -21,7 +21,7 @@ public class ej16 {
         return size;
     }
 
-    public static int[][] crearArray(int[] size) {
+    public static boolean crearArray(int[] size) {
         Scanner scan = new Scanner(System.in);
         int[][] nums = new int[size[0]][size[1]];
         for (int i = 0; i < size[0]; i++) {
@@ -32,9 +32,12 @@ public class ej16 {
             }
         }
 
-        scan.close();
+        /* scan.close(); */
 
-        return nums;
+        if(comprobarCol(nums) && comprobarFilas(nums) == true){
+            return true;
+        }
+        return false;
     }
 
     public static boolean comprobarFilas(int[][] nums) {
@@ -47,6 +50,30 @@ public class ej16 {
 
                 if (i == 0) {
                     oldSuma += nums[i][j];
+                }
+            }
+
+            if (i > 0){
+                if (suma != oldSuma) {
+                    return false;
+                }
+                oldSuma = suma;
+                suma = 0;
+            }
+        }
+        return true;
+    }
+
+    public static boolean comprobarCol(int[][] nums) {
+        int suma = 0, oldSuma = 0;
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums[i].length; j++) {
+                if (i  > 0) {
+                    suma += nums[j][i];
+                }
+
+                if (i == 0) {
+                    oldSuma += nums[j][i];
                 }
             }
 
