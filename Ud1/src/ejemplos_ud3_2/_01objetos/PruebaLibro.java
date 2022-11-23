@@ -10,8 +10,10 @@ public class PruebaLibro {
     System.out.println(libro4);
     System.out.println(libro4.getTitulo());
 
+    libro4.prestar();
+
     libro4.setAutor("Antonio Priego");
-    System.out.println(libro4.getAutor());
+    System.out.println(libro4);
     
     //
     /* libro1.isbn= "9788426417213";
