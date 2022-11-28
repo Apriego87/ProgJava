@@ -1,12 +1,18 @@
 package ud3_2_Practicas;
 
+
 public class ej1 {
     public static void main(String[] args) {
         /* Caballo caballo1 = new Caballo("nombre1", 3); */
-        Caballo caballo2 = new Caballo("Perdigón", "Pinto", 7, 420.0, 3, false);
+        Caballo perdigon = new Caballo("Perdigón", "Pinto", 7, 420.0, 3, false);
+        Caballo que = new Caballo("que", "raza", 3, 400, 1, true);
+        Caballo nose = new Caballo("nose", "raza", 4, 430, 2, true);
 
-        System.out.println(caballo2);
-        caballo2.come("zanahoria");
-        caballo2.come("pienso");
+        System.out.println(perdigon);
+        perdigon.come("zanahoria");
+        perdigon.come("pienso");
+
+        que.compiten(nose);
+        que.compiten(perdigon);
     }
 }

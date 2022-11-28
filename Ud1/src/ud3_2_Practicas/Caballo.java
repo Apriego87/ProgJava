@@ -1,5 +1,7 @@
 package ud3_2_Practicas;
 
+import java.util.Scanner;
+
 public class Caballo {
     private String nombre;
     private String raza;
@@ -7,7 +9,9 @@ public class Caballo {
     private double peso;
     private int establo;
     private boolean competidor;
-    private String categoría;
+    private int velocidad;
+
+    Scanner scan = new Scanner(System.in);
 
     /* public Caballo(String nombre, int establo){
         this.nombre = nombre;
@@ -15,16 +19,21 @@ public class Caballo {
     } */
 
 
-    public Caballo(String nombre, String raza, int edad, double peso, int establo, boolean competidor, String categoría) {
+    public Caballo(String nombre, String raza, int edad, double peso, int establo, boolean competidor) {
         this.nombre = nombre;
         this.raza = raza;
         this.edad = edad;
         this.peso = peso;
         this.establo = establo;
         this.competidor = competidor;
+        if (competidor == true){
+            System.out.printf("Introduce la velocidad de '%s': ", this.nombre);
+            this.velocidad = scan.nextInt();
+        }
+        if (competidor == false){
+            this.velocidad = 0;
+        }
     }
-
-    public void competidor(){}
 
 
     public String getNombre() {
@@ -76,16 +85,35 @@ public class Caballo {
         }
       }
 
+    public void compiten(Caballo enemy){
+        if(this.competidor == false){
+            System.out.printf("Lo siento, %s no compite.", this.nombre);
+        }
+        if(enemy.competidor == false){
+            System.out.printf("Lo siento, %s no compite.", enemy.nombre);
+        }
+        if (this.competidor == true && enemy.competidor == true){
+            if (this.velocidad > enemy.velocidad){
+                System.out.printf("%s gana!\n", this.nombre);
+            }
+            if (this.velocidad < enemy.velocidad){
+                System.out.printf("%s gana!\n", enemy.nombre);
+            }
+            if (this.velocidad == enemy.velocidad){
+                System.out.println("Empate!");
+            }
+        }
+    }
 
     @Override
     public String toString() {
-        return "{" +
-            " nombre='" + getNombre() + "'" +
-            ", raza='" + getRaza() + "'" +
-            ", edad='" + getEdad() + "'" +
-            ", peso='" + getPeso() + "'" +
-            ", establo='" + getEstablo() + "'" +
-            "}";
+        return "[" +
+            " nombre: " + getNombre() +
+            " | raza: " + getRaza() +
+            " | edad: " + getEdad() +
+            " | peso: " + getPeso() +
+            " | establo: " + getEstablo() +
+            " ]";
     }
 
 
