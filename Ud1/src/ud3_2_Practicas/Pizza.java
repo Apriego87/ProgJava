@@ -3,20 +3,20 @@ package ud3_2_Practicas;
 public class Pizza {
     private String tamaño;
     private String tipo;
-    private String estado;
+    private boolean estado;
     private static int TotalPedidas = 0;
     private static int TotalServidas = 0;
 
     public Pizza(String tamaño, String tipo) {
         this.tamaño = tamaño;
         this.tipo = tipo;
-        this.estado = "pedida";
+        this.estado = false;
         TotalPedidas++;
     }
 
     public void sirve() {
-        if (this.estado.equals("pedida")) {
-            this.estado = "servida";
+        if (this.estado == false) {
+            this.estado = true;
             TotalServidas++;
         } else {
             System.out.println("esa pizza ya se ha servido.");
@@ -40,7 +40,10 @@ public class Pizza {
     }
 
     public String getEstado() {
-        return this.estado;
+        if (this.estado == false){
+            return "pedida";
+        }
+        return "servida";
     }
 
     @Override
