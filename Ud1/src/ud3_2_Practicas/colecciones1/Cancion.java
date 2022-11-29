@@ -30,4 +30,14 @@ public class Cancion {
         this.autor = autor;
     }
 
+
+    @Override
+    public String toString() {
+        return "{" +
+            " titulo='" + dameTitulo() + "'" +
+            ", autor='" + dameAutor() + "'" +
+            "}";
+    }
+
+
 }
