@@ -13,11 +13,12 @@ public class Caballo {
 
     Scanner scan = new Scanner(System.in);
 
-    /* public Caballo(String nombre, int establo){
-        this.nombre = nombre;
-        this.establo = establo;
-    } */
-
+    /*
+     * public Caballo(String nombre, int establo){
+     * this.nombre = nombre;
+     * this.establo = establo;
+     * }
+     */
 
     public Caballo(String nombre, String raza, int edad, double peso, int establo, boolean competidor) {
         this.nombre = nombre;
@@ -26,15 +27,14 @@ public class Caballo {
         this.peso = peso;
         this.establo = establo;
         this.competidor = competidor;
-        if (competidor == true){
+        if (competidor == true) {
             System.out.printf("Introduce la velocidad de '%s': ", this.nombre);
             this.velocidad = scan.nextInt();
         }
-        if (competidor == false){
+        if (competidor == false) {
             this.velocidad = 0;
         }
     }
-
 
     public String getNombre() {
         return this.nombre;
@@ -76,30 +76,29 @@ public class Caballo {
         return this.competidor;
     }
 
-
     public void come(String comida) {
         if (comida.equals("zanahoria")) {
-          System.out.println("Qué rico, gracias!");
+            System.out.println("Qué rico, gracias!");
         } else {
-          System.out.println("Prefiero las zanahorias :(");
+            System.out.println("Prefiero las zanahorias :(");
         }
-      }
+    }
 
-    public void compiten(Caballo enemy){
-        if(this.competidor == false){
+    public void compiten(Caballo enemy) {
+        if (this.competidor == false) {
             System.out.printf("Lo siento, %s no compite.", this.nombre);
         }
-        if(enemy.competidor == false){
+        if (enemy.competidor == false) {
             System.out.printf("Lo siento, %s no compite.", enemy.nombre);
         }
-        if (this.competidor == true && enemy.competidor == true){
-            if (this.velocidad > enemy.velocidad){
+        if (this.competidor == true && enemy.competidor == true) {
+            if (this.velocidad > enemy.velocidad) {
                 System.out.printf("%s gana!\n", this.nombre);
             }
-            if (this.velocidad < enemy.velocidad){
+            if (this.velocidad < enemy.velocidad) {
                 System.out.printf("%s gana!\n", enemy.nombre);
             }
-            if (this.velocidad == enemy.velocidad){
+            if (this.velocidad == enemy.velocidad) {
                 System.out.println("Empate!");
             }
         }
@@ -108,15 +107,12 @@ public class Caballo {
     @Override
     public String toString() {
         return "[" +
-            " nombre: " + getNombre() +
-            " | raza: " + getRaza() +
-            " | edad: " + getEdad() +
-            " | peso: " + getPeso() +
-            " | establo: " + getEstablo() +
-            " ]";
+                " nombre: " + getNombre() +
+                " | raza: " + getRaza() +
+                " | edad: " + getEdad() +
+                " | peso: " + getPeso() +
+                " | establo: " + getEstablo() +
+                " ]";
     }
 
-
 }
-
-

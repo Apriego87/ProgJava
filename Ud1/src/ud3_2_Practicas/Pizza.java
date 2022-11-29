@@ -18,8 +18,7 @@ public class Pizza {
         if (this.estado.equals("pedida")) {
             this.estado = "servida";
             TotalServidas++;
-        }
-        else{
+        } else {
             System.out.println("esa pizza ya se ha servido.");
         }
     }
