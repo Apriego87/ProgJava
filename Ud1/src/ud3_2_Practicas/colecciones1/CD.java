@@ -38,10 +38,20 @@ public class CD {
         cont++;
         return true;
     }
+    
+    public boolean elimina(int pos) {
+        if(pos > 0 || pos < cont){
+            for (int i = pos-1; i < cont; i++){
+                canciones[i] = canciones[i+1];
+            }
+            cont--;
+        }
+        return true;
+    }
 
     @Override
     public String toString() {
-        String cadena = "contenido del CD:\n";
+        String cadena = " contenido del CD:\n";
         for (int i = 0; i < cont; i++) {
             cadena += canciones[i].dameTitulo() + " " + canciones[i].dameAutor() + "\n";
         }
