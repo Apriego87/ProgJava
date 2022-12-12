@@ -3,27 +3,27 @@ package ud3_2_Practicas.arraylists;
 import ud3_2_Practicas.clases.*;
 
 public class Libro {
-    private String titulo;
-    private Persona autor;
-    private String isbn;
-    private int paginas;
-    private int edicion;
-    private String editorial;
-    private Lugar lugar;
-    private Fecha fechaEdicion;
+    public String titulo;
+    public Persona autor;
+    public String isbn;
+    public int paginas;
+    public int edicion;
+    public String editorial;
+    public Lugar lugar;
+    public Fecha fechaEdicion;
 
-    /* public Libro() {
-    } */
+    public Libro() {
+    }
 
     public Libro(String titulo, Persona autor, String isbn, int paginas, int edicion, String editorial, Lugar lugar, Fecha fechaEdicion) {
-        titulo = this.titulo;
-        autor = this.autor;
-        isbn = this.isbn;
-        paginas = this.paginas;
-        edicion = this.edicion;
-        editorial = this.editorial;
-        lugar = this.lugar;
-        fechaEdicion = this.fechaEdicion;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.isbn = isbn;
+        this.paginas = paginas;
+        this.edicion = edicion;
+        this.editorial = editorial;
+        this.lugar = lugar;
+        this.fechaEdicion = fechaEdicion;
     }
 
     public String getTitulo() {
@@ -94,11 +94,10 @@ public class Libro {
     public String toString() {
         return " \n\tTítulo: " + getTitulo() + "\n" +
                 " \t" + getEdicion() + "a. edición" + "\n" +
-                " \tAutor: " + getAutor() + "\n" +
+                " \tAutor: " + getAutor().dameApellidos() + ", " + getAutor().dameNombre() + "\n" +
                 " \tISBN: " + getIsbn() + "\n" +
-                " \t" + getLugar() + getFechaEdicion() + "\n" +
-                " \t" + getPaginas() + " páginas." + "\n" +
-                " \tEditorial: " + getEditorial();
+                " \t" + getEditorial() + ", " + getLugar().getCiudad() + " (" + getLugar().getPais() + "), " + getFechaEdicion() + "\n" +
+                " \t" + getPaginas() + " páginas." + "\n";
     }
 
 }
