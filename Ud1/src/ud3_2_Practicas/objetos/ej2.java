@@ -1,4 +1,4 @@
-package ud3_2_Practicas;
+package ud3_2_Practicas.objetos;
 
 public class ej2 {
     public static void main(String[] args) {

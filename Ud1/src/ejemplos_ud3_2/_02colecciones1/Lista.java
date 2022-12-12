@@ -5,8 +5,8 @@ package _02colecciones1;
 public class Lista {
   private final static int MAX = 100;
   private Persona _array[];
-  private int _cont = 0; // Indica la primera posición libre
-  // del array. Igual al número de elementos
+  private int _cont = 0; // Indica la primera posiciï¿½n libre
+  // del array. Igual al nï¿½mero de elementos
 
   public Lista() {
     _array = new Persona[MAX];
@@ -27,8 +27,8 @@ public class Lista {
   }
 
   public Persona recuperar(int pos) {
-  // true si tiene éxito; false si posición no válida
-  // pos variará de 1 al número de elementos
+  // true si tiene ï¿½xito; false si posiciï¿½n no vï¿½lida
+  // pos variarï¿½ de 1 al nï¿½mero de elementos
     if((pos < 1) || (pos > _cont)) return null;
     return _array[pos-1];
   }
