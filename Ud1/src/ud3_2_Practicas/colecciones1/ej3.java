@@ -13,6 +13,6 @@ public class ej3 {
         libro.setTitulo(scan.nextLine());
 
         System.out.println("Nif, edad, nombre, apellidos: ");
-        libro.setAutor.nif();
+        return libro;
     }
 }
