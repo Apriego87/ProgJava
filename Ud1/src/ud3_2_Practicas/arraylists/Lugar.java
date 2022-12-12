@@ -7,8 +7,8 @@ public class Lugar {
     public Lugar(){}
 
     public Lugar(String ciudad, String pais){
-        ciudad = this.ciudad;
-        pais = this.pais;
+        this.ciudad = ciudad;
+        this.pais = pais;
     }
 
 

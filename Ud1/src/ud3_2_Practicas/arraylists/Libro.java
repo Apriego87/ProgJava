@@ -3,6 +3,7 @@ package ud3_2_Practicas.arraylists;
 import ud3_2_Practicas.clases.*;
 
 public class Libro {
+
     public String titulo;
     public Persona autor;
     public String isbn;

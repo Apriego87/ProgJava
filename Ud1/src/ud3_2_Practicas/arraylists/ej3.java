@@ -2,7 +2,7 @@ package ud3_2_Practicas.arraylists;
 
 import java.util.Scanner;
 
-import ud3_2_Practicas.clases.*;;
+import ud3_2_Practicas.clases.*;
 
 public class ej3 {
     public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class ej3 {
         datosFecha(fecha, scan);
         Libro libro = new Libro("Introduction to Java Programming", persona, "0-13-031997-X", 370, 3, "McGraw Hill", lugar, fecha);
 
-        System.out.println("\nDATOS DEL LIBRO: " + libro);
+        System.out.println();
     }
 
     public static Persona datosPersona(Persona persona, Scanner scan, Scanner scan2) {
