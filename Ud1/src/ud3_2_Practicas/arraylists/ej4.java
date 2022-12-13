@@ -1,11 +1,12 @@
 package ud3_2_Practicas.arraylists;
-import ud3_2_Practicas.clases.*;
+import ud3_2_Practicas.objetos.*;
+
 
 public class ej4 {
     public static void main(String[] args) {
         Persona p1 = new Persona(435762, 31, "Javier", "Hernandez Perez");
         Fecha f1 = new Fecha(16, 11, 2001);
-        Lugar lugar1 = new Lugar("Madrid", "España");
+        Lugar    lugar1 = new Lugar("Madrid", "España");
         Libro libro1 = new Libro("Introducción a Java", p1,
                 "0-13-031997-X", 546, 3, "Prentice-Hall", lugar1, f1);
 

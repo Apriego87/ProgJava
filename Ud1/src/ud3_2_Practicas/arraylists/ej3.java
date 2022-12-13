@@ -1,5 +1,7 @@
 package ud3_2_Practicas.arraylists;
 
+
+
 import java.util.Scanner;
 
 import ud3_2_Practicas.clases.*;
