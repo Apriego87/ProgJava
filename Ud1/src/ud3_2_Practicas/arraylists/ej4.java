@@ -15,13 +15,14 @@ public class ej4 {
         Libro libro3 = new Libro("Avanzado Java", p1,
                 "0-13-031997-X", 546, 3, "McGraw-Hill", lugar1, f1);
 
-        Lista a = new Lista();
+        Lista lista = new Lista();
 
-        a.insertar(libro1);
-        a.insertar(libro2);
-        a.insertar(libro3);
+        lista.insertar(libro1);
+        lista.insertar(libro2);
+        lista.insertar(libro3);
 
-        System.out.println(a);
-        a.getPorTit("Avanzado");
+        System.out.println(lista);
+        System.out.println(lista.getPorTit("mecago"));
+        System.out.println(lista.borrarPorPos(1));
     }
 }

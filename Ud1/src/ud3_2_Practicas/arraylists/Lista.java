@@ -1,7 +1,6 @@
 package ud3_2_Practicas.arraylists;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Lista {
     private ArrayList<Libro> lista;
@@ -39,14 +38,19 @@ public class Lista {
         }
     }
 
-    public void getPorTit(String tit){
-        
+    public ArrayList<Integer> getPorTit(String tit){
+        ArrayList<Integer> posiciones = new ArrayList<Integer>();
+        int cont = 0;
         for (int i = 0; i < lista.size(); i++){
             if(lista.get(i).getTitulo().toLowerCase().contains(tit.toLowerCase())){
-                System.out.println(i); 
+                posiciones.add(i+1);
+                cont++;
             }
         }
-        
+        if (cont == 0){
+            posiciones.add(-1);
+        }
+        return posiciones;
     }
 
     @Override
