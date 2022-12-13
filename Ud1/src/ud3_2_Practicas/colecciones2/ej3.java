@@ -27,6 +27,7 @@ public class ej3 {
             System.out.println("\t2. Buscar producto por código");
             System.out.println("\t3. borrar producto por código");
             System.out.println("\t4. Cambiar precio del producto por código");
+            System.out.println("\t5. Agregar producto");
 
             System.out.printf("¿Qué quieres hacer? (si quieres salir, pulsa 0): ");
 
@@ -45,6 +46,8 @@ public class ej3 {
                 case 4:
                     System.out.println(l1.cambiarPrecio(busPorCod(scan), cambiarPrecio(scan)));
                     break;
+                case 5:
+                    System.out.println(l1.agregar(p2));
             }
         }
 
@@ -73,5 +76,12 @@ public class ej3 {
     public static double cambiarPrecio(Scanner scan) {
         System.out.print("Introduce el nuevo precio: ");
         return scan.nextDouble();
+    }
+
+    public static Producto agregar(Scanner scan) {
+        Producto prod = new Producto();
+        System.out.print("Introduce el código: ");
+        prod.setCodigo(scan.nextInt());
+        return prod;
     }
 }
