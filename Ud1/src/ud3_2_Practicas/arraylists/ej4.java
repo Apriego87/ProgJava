@@ -1,5 +1,5 @@
 package ud3_2_Practicas.arraylists;
-import ud3_2_Practicas.objetos.*;
+import ud3_2_Practicas.clases.*;
 
 
 public class ej4 {
