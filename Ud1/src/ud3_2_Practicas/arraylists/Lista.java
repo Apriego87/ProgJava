@@ -1,6 +1,7 @@
 package ud3_2_Practicas.arraylists;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Lista {
     private ArrayList<Libro> lista;
@@ -55,6 +56,7 @@ public class Lista {
 
     @Override
     public String toString() {
+        /*
         String mensaje;
         if (vacia()){
             return "La lista de libros está vacía.";
@@ -66,6 +68,15 @@ public class Lista {
             mensaje += lista.get(i) + "\n--------------------\n";
         }
 
-        return mensaje;
+        return mensaje; */
+
+        String cad = lista.size() + " elementos en la lista: \n";
+
+        Iterator it = lista.iterator();
+
+        while (it.hasNext()){
+            cad += it.next() + "-----------------------------------";
+        }
+        return cad;
     }
 }

@@ -11,9 +11,9 @@ public class ej4 {
                 "0-13-031997-X", 546, 3, "Prentice-Hall", lugar1, f1);
 
         Libro libro2 = new Libro("Beginning Java", p1,
-                "0-13-031997-X", 546, 3, "Addison", lugar1, f1);
+                "0-13-031997-Y", 546, 3, "Addison", lugar1, f1);
         Libro libro3 = new Libro("Avanzado Java", p1,
-                "0-13-031997-X", 546, 3, "McGraw-Hill", lugar1, f1);
+                "0-13-031997-Z", 546, 3, "McGraw-Hill", lugar1, f1);
 
         Lista lista = new Lista();
 
@@ -22,7 +22,7 @@ public class ej4 {
         lista.insertar(libro3);
 
         System.out.println(lista);
-        System.out.println(lista.getPorTit("mecago"));
-        System.out.println(lista.borrarPorPos(1));
+        /* System.out.println(lista.getPorTit("Java"));
+        System.out.println(lista.borrarPorPos(1)); */
     }
 }
