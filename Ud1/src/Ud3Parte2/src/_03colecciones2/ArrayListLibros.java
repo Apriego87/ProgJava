@@ -1,5 +1,6 @@
 package _03colecciones2;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 // Repaso ArrayList
@@ -31,7 +32,7 @@ public class ArrayListLibros {
   }
   
   
-  public int buscar(String parte) { // Devuelve índice, no posición
+  public int buscar(String parte) { // Devuelve ï¿½ndice, no posiciï¿½n
   
     
     int i=0;
@@ -74,6 +75,18 @@ public class ArrayListLibros {
     for(int i = 0; i < lista.size(); i++)
       cad += lista.get(i) + "\n-----------------------------------------------\n";
     return cad;
+  }
+
+  public void ordenarPorEd(){
+    Collections.sort(lista);
+  }
+
+  public void ordenarPorPag(){
+    Collections.sort(lista, new PaginasComparator());
+  }
+
+  public void ordenarPorTit(){
+    Collections.sort(lista, new TituloComparator());
   }
   
  /* public String toString() {

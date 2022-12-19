@@ -1,18 +1,21 @@
 package _03colecciones2;
 // PruebaListaLibros.java: prueba de la clase ArrayListLibros
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public class PruebaArrayListLibros {
   public static void main(String args[]) {
   	Persona p1 = new Persona(435762, 31, "Javier", "Hernandez Perez");
     Fecha f1 = new Fecha(16,11,2001);
-    Libro l1 = new Libro("Introducción a Java",p1, 
-                         "0-13-031997-X",546,3,"Prentice-Hall","Madrid-España",f1);
+    Libro l1 = new Libro("Introducciï¿½n a Java",p1, 
+                         "0-13-031997-X",586,3,"Prentice-Hall","Madrid-Espaï¿½a",f1);
                          
     Libro l2 = new Libro("Beginning Java",p1, 
-                         "0-13-031997-X",546,3,"Addison","Madrid-España",f1);                     
+                         "0-13-031997-X",516,3,"Addison","Madrid-Espaï¿½a",f1);                     
     Libro l3 = new Libro("Avanzado Java",p1, 
-                         "0-13-031997-X",546,3,"McGraw-Hill","Madrid-España",f1);
+                         "0-13-031997-X",546,3,"McGraw-Hill","Madrid-Espaï¿½a",f1);
     
                      
     
@@ -20,7 +23,9 @@ public class PruebaArrayListLibros {
     a.insertarOrden(l1);
     a.insertarOrden(l2);
     a.insertarOrden(l3);
-  
+
+    a.ordenarPorTit();
+
   System.out.println(a);
     
  /*   int indice=a.buscar("AVANZADO");

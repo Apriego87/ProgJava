@@ -1,7 +1,7 @@
 package _03colecciones2;
 
 
-public class Libro {
+public class Libro implements Comparable<Libro> {
   private String titulo;
   private Persona autor;
   private String isbn;
@@ -39,6 +39,10 @@ public class Libro {
   
   public String dameTitulo() { return titulo; }
   public Persona dameAutor() { return autor; }
+
+  public int getPaginas() {
+    return paginas;
+  }
   
 
   
@@ -54,6 +58,11 @@ public class Libro {
               editorial + ", "+ lugar + ", " + fechaEdicion  +"\n"+
               paginas +" paginas");
     }
+  @Override
+  public int compareTo(Libro o) {
+    // TODO Auto-generated method stub
+    return editorial.compareToIgnoreCase(o.editorial);
+  }
  
 
 
