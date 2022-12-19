@@ -1,9 +1,9 @@
 package ud3_2_Practicas.colecciones2;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
-public class ArrayProducto {
-    ArrayList<Producto> lista = new ArrayList<Producto>();
+public class LinkedProducto {
+    LinkedList<Producto> lista = new LinkedList<Producto>();
 
     public boolean vacia() {
         return lista.isEmpty();
@@ -23,6 +23,7 @@ public class ArrayProducto {
     }
 
     public Producto busPorPos(int pos) {
+        System.out.print("\n");
         return lista.get(pos - 1);
     }
 

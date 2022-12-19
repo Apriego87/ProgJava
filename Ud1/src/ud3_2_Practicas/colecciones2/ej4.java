@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 import ud3_2_Practicas.clases.*;
 
-public class ej3 {
+public class ej4 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Producto p1 = new Producto(12, "Garbanzos", "Conserva", 1.99, 10);
         Producto p2 = new Producto(34, "Sandía", "Fruta", 0.59, 5);
 
-        ArrayProducto l1 = new ArrayProducto();
+        LinkedProducto l1 = new LinkedProducto();
 
         l1.agregar(p1);
         l1.agregar(p2);
