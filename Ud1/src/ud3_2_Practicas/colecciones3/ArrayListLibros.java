@@ -3,6 +3,7 @@ package ud3_2_Practicas.colecciones3;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
+import ud3_2_Practicas.clases.*;
 
 // Repaso ArrayList
 
@@ -29,7 +30,7 @@ public class ArrayListLibros {
     int i = 0;
     boolean encontrado = false;
     while ((i < lista.size()) && (!encontrado)) {
-      if ((lista.get(i).dameTitulo().toUpperCase().indexOf(parte.toUpperCase())) != -1)
+      if ((lista.get(i).getTitulo().toUpperCase().indexOf(parte.toUpperCase())) != -1)
         encontrado = true;
       else
         i++;
@@ -70,19 +71,19 @@ public class ArrayListLibros {
     return cad;
   }
 
-  public void ordenarPorEd() {
+  /* public void ordenarPorEd() {
     Collections.sort(lista);
-  }
+  } */
 
-  public void ordenarPorPag() {
+  /* public void ordenarPorPag() {
     Collections.sort(lista, new PaginasComparator());
   }
 
   public void ordenarPorTit() {
     Collections.sort(lista, new TituloComparator());
-  }
+  } */
 
-  public class TituloComparator implements Comparator<Libro> {
+  /* public class TituloComparator implements Comparator<Libro> {
 
     @Override
     public int compare(Libro o1, Libro o2) {
@@ -100,7 +101,7 @@ public class ArrayListLibros {
       return 0;
     }
 
-  }
+  } */
 
   /*
    * public String toString() {

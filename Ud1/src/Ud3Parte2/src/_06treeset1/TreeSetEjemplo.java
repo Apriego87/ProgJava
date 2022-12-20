@@ -12,6 +12,7 @@ public class TreeSetEjemplo {
         conjunto.add("Sierra Guara");
         conjunto.add("Ciclo");
         conjunto.add("DAM");
+        System.out.println(conjunto.add("Ciclo"));
         
         System.out.println(conjunto);
     }

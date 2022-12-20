@@ -1,6 +1,7 @@
 package _04ordenando_colecciones;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class PruebaUsuario1 {
 
@@ -12,10 +13,15 @@ public class PruebaUsuario1 {
 		 lista.add(new Usuario1("cuatro", 44));
 		 System.out.println("\n Imprimo el objeto lista directamente:");
          System.out.println(lista);
-         System.out.println("\n Imprimo el objeto lista con método;");
+         System.out.println("\n Imprimo el objeto lista con mï¿½todo;");
          imprimirLista(lista);
 		 System.out.println("\n Ahora ordenados por nombre...");
-		 Collections.sort(lista, new NombreComparator());
+		 Collections.sort(lista, new Comparator<Usuario1>(){
+			@Override
+			public int compare (Usuario1 o1, Usuario1 o2){
+				return o1.getEdad() - o2.getEdad();
+			}
+		 });
 		 //metodo que imprime la lista
 		 imprimirLista(lista);
 		 System.out.println("\n y ahora ordenados por edad...");

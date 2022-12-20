@@ -1,35 +1,41 @@
 package _05hashset;
 
-public class Producto { 
+import java.util.Objects;
 
-private String nombre; 
-private int cantidad; 
+public class Producto {
 
-public Producto(String s, int i) {
-nombre = s;
-cantidad = i;
-} 
+    private String nombre;
+    private int cantidad;
 
-public String toString(){
-return ("Nombre: "+nombre+" Cantidad: "+cantidad);
-} 
+    public Producto(String s, int i) {
+        nombre = s;
+        cantidad = i;
+    }
 
-public String getNombre() {
-return this.nombre;
-} 
+    public String toString() {
+        return ("Nombre: " + nombre + " Cantidad: " + cantidad);
+    }
 
-public boolean equals( Object objeto ) {
-if (objeto == null) return false; 
+    public String getNombre() {
+        return this.nombre;
+    }
 
-Producto producto = (Producto)objeto; 
-if (this.getNombre().equals(producto.getNombre()) )
-return true;
 
-return false;
-} 
+    @Override
+    public boolean equals(Object o) {
+        if (o == this)
+            return true;
+        if (!(o instanceof Producto)) {
+            return false;
+        }
+        Producto producto = (Producto) o;
+        return Objects.equals(nombre, producto.nombre) || cantidad == producto.cantidad;
+    }
 
-public int hashCode() {
-return this.getNombre().hashCode();
+    @Override
+    public int hashCode() {
+        return nombre.hashCode();
+    }
+    
+
 }
-
-} 
