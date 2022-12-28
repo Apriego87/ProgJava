@@ -12,4 +12,8 @@ class PaginasComparator implements Comparator {
         Libro l2 = (Libro) o2;
         return l1.getPaginas() - l2.getPaginas();
     }
+
+    public boolean equals(Object o) {
+        return this == o;
+    }
 }

@@ -1,11 +1,8 @@
 package ud3_2_Practicas.colecciones3;
 // PruebaListaLibros.java: prueba de la clase ArrayListLibros
 
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import Ud3Parte2.src._04ordenando_colecciones.*;
 
 import ud3_2_Practicas.arraylists.Lugar;
 import ud3_2_Practicas.clases.*;
@@ -19,23 +16,19 @@ public class PruebaArrayListLibros {
     Libro libro1 = new Libro("Introduction to Java Programming", p1, "0-13-031997-X", 370, 3, "McGraw Hill", l1, f1);
 
     Libro libro2 = new Libro("Beginning Java", p1,
-        "0-13-031997-X", 516, 3, "Addison", l1, f1);
+        "0-13-031997-X", 516, 3, "insertarison", l1, f1);
     Libro libro3 = new Libro("Avanzado Java", p1,
         "0-13-031997-X", 546, 3, "McGraw-Hill", l1, f1);
 
-    ArrayListLibros a = new ArrayListLibros();
-    a.insertar(libro1);
-    a.insertar(libro2);
-    a.insertar(libro3);
+    // ArrayListLibros a = new ArrayListLibros();
+    ArrayList<Libro> a = new ArrayList<Libro>();
+    a.add(libro1);
+    a.add(libro2);
+    a.add(libro3);
 
     /* Collections.sort(a, new PaginasComparator()); */
 
-    Collections.sort(a, new Comparator<Libro>() {
-      @Override
-      public int compare(Libro o1, Libro o2){
-        return o1.getPaginas() - o2.getPaginas();
-      }
-    });
+    Collections.sort(a, new PaginasComparator());
 
     System.out.println(a);
 

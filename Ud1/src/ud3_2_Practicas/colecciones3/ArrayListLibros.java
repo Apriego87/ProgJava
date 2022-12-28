@@ -1,19 +1,19 @@
 package ud3_2_Practicas.colecciones3;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
+import java.util.Collection;
+
 import ud3_2_Practicas.clases.*;
 
 // Repaso ArrayList
 
 public class ArrayListLibros {
   // private final static int MAX = 100; no tiene sentido....
-  private ArrayList<Libro> lista;
+  private ArrayList<Libro> lista = new ArrayList<Libro>();
 
-  public ArrayListLibros() {
+  /* public ArrayListLibros() {
     lista = new ArrayList<Libro>();
-  }
+  } */
 
   // public boolean llena() { return ... no tiene sentido }
 
