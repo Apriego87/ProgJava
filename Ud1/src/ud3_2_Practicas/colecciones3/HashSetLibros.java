@@ -1,7 +1,6 @@
 package ud3_2_Practicas.colecciones3;
 
 import java.util.HashSet;
-import java.util.Iterator;
 
 import ud3_2_Practicas.clases.*;
 
@@ -31,23 +30,22 @@ public class HashSetLibros {
     return lista.contains(libro);
   }
 
-  public Object busPorTit(String tit) {
-    Iterator value = lista.iterator();
-
-    System.out.println("The iterator values are: ");
-    while (value.hasNext()) {
-      System.out.println(value.next());
-    }
-    return value.next();
+  public void busPorTit(String tit) {
+      for (Libro l: lista){
+        if(l.getTitulo().toLowerCase().contains(tit.toLowerCase())){
+          System.out.println(l);
+          
+        }
+      }
   }
 
-  
-
-  /* public String toString() {
+  public String toString() {
+    // Iterator value = lista.iterator();
     String cad = lista.size() + " Elementos de la lista:\n\n";
-    for (int i = 0; i < lista.size(); i++)
-      cad += lista.iterator() + "\n-----------------------------------------------\n";
+    for (Libro l: lista){
+      cad += l;
+    }
     return cad;
-  } */
+  }
 
 }
