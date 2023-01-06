@@ -1,13 +1,12 @@
 package ud3_2_Practicas.colecciones3;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 import ud3_2_Practicas.clases.*;
 
 // Repaso ArrayList
 
-public class ArrayListLibros {
+public class ArrayListLibros{
   // private final static int MAX = 100; no tiene sentido....
   private ArrayList<Libro> lista = new ArrayList<Libro>();
 

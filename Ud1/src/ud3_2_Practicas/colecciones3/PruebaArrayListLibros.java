@@ -3,6 +3,7 @@ package ud3_2_Practicas.colecciones3;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 import ud3_2_Practicas.arraylists.Lugar;
 import ud3_2_Practicas.clases.*;
@@ -29,8 +30,12 @@ public class PruebaArrayListLibros {
     /* Collections.sort(a, new PaginasComparator()); */
 
     Collections.sort(a, new PaginasComparator());
+    //
 
-    System.out.println(a);
+    System.out.printf("Ordenadas por Nº de páginas:\n" + a + "\n\n");
+
+    Collections.sort(a, new TituloComparator());
+    System.out.printf("Ordenadas por título (alfabético):\n" + a);
 
     /*
      * int indice=a.buscar("AVANZADO");

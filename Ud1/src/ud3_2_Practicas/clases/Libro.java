@@ -1,8 +1,10 @@
 package ud3_2_Practicas.clases;
 
+import java.util.Comparator;
+
 import ud3_2_Practicas.arraylists.Lugar;
 
-public class Libro {
+public class Libro implements Comparable<Libro> {
 
     public String titulo;
     public Persona autor;
@@ -99,6 +101,11 @@ public class Libro {
                 " \tISBN: " + getIsbn() + "\n" +
                 " \t" + getEditorial() + ", " + getLugar().getCiudad() + " (" + getLugar().getPais() + "), " + getFechaEdicion() + "\n" +
                 " \t" + getPaginas() + " páginas." + "\n";
+    }
+
+    @Override
+    public int compareTo(Libro o) {
+        return (this.paginas - o.paginas);
     }
 
 }
