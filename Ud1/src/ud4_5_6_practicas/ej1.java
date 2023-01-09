@@ -1,6 +1,8 @@
 package ud4_5_6_practicas;
 
 import java.util.*;
+import java.sql.Time;
+import java.time.*;
 import ud3_2_Practicas.clases.*;
 
 public class ej1 {
@@ -17,8 +19,10 @@ public class ej1 {
         int year = scan.nextInt();
 
         System.out.printf("\n Método 1: %d", metodo1(dia, mes, year).diaSemana());
-        System.out.printf("\n Método 2: %d", metodo2(dia, mes, year).getDay());
+        System.out.printf("\n Método 2: %d", metodo2(dia, mes, year));
         System.out.printf("\n Método 3: %d", metodo3(dia, mes, year));
+        System.out.println("\n Método 4: " + metodo4(dia, mes, year).getDayOfWeek().getValue());
+
     }
 
     public static Fecha metodo1(int dia, int mes, int year) {
@@ -26,16 +30,22 @@ public class ej1 {
         return f1;
     }
 
-    public static Date metodo2(int dia, int mes, int year) {
+    public static int metodo2(int dia, int mes, int year) {
         @SuppressWarnings("deprecation")
 
-        Date f2 = new Date(dia, mes, year);
+        int f2 = new Date(dia, mes, year).getDay();
         return f2;
     }
 
     public static int metodo3(int dia, int mes, int year) {
-        GregorianCalendar c = new GregorianCalendar();
-        c.setTime(metodo2(dia, mes, year));
-		return(c.get((Calendar.DAY_OF_WEEK)));
+        GregorianCalendar f3 = new GregorianCalendar();
+        Date fecha = new Date(dia, mes, year);
+        f3.setTime(fecha);
+		return f3.get(GregorianCalendar.DAY_OF_WEEK) - 1;
+    }
+
+    public static LocalDate metodo4 (int dia, int mes, int year){
+        LocalDate fecha = LocalDate.of(year, mes, dia);
+        return fecha;
     }
 }
